@@ -1,0 +1,15 @@
+from sll import *
+ll=Sll()
+ll.append(10)
+ll.append(1)
+ll.append(15)
+ll.append(8)
+ll.append(21)
+ll.traversal()
+ll.reverse()
+print()
+ll.traversal()
+print()
+print(ll.head.val)
+print(ll.tail.val)
+
