@@ -1,10 +1,9 @@
 class Solution:
         def sumBase(self, n, k):
-            total = 0
-            while n > 0:
-                total += n % k   # get last digit
-                n //= k          # remove last digit
-            return total
+            if n==0:
+                return 0
+            else:
+                return n%k +self.sumBase(n//k,k)
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
