@@ -5,9 +5,10 @@ class Solution(object):
         :rtype: int
         """
         c=0 
+        d=set(['a','e','i','o','u'])
         l=len(word)          
-        for i in range(len(word)):            
-            if word[i] in 'aeiou':
+        for i in range(l):            
+            if word[i] in d:
                 c+=(i+1)*(l-i)
                 
         return c
