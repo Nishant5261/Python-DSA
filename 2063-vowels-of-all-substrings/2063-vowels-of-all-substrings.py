@@ -5,9 +5,9 @@ class Solution(object):
         :rtype: int
         """
         ts=(len(word)*(len(word)+1)//2)
-        c=0        
-        for i in range(len(word)):
-            ts=(len(word)*(len(word)+1))//2
+        c=0 
+        ts=(len(word)*(len(word)+1))//2       
+        for i in range(len(word)):            
             if word[i] in 'aeiou':
                 ps=((i+1)*(i))//2
                 ns=((len(word)-i-1)*(len(word)-i))//2
