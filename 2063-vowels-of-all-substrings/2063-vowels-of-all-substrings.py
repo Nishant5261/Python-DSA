@@ -4,14 +4,12 @@ class Solution(object):
         :type word: str
         :rtype: int
         """
-        ts=(len(word)*(len(word)+1)//2)
         c=0 
-        ts=(len(word)*(len(word)+1))//2       
+        l=len(word)          
         for i in range(len(word)):            
             if word[i] in 'aeiou':
-                ps=((i+1)*(i))//2
-                ns=((len(word)-i-1)*(len(word)-i))//2
-                c+=(ts-ps-ns)
+                c+=(i+1)*(l-i)
+                
         return c
 
 # Synced seamlessly with LeetHub Pro
