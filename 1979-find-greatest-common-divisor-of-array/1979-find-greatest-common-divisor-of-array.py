@@ -10,9 +10,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        nums.sort()
-        s=nums[0]
-        l=nums[-1]
+        s=min(nums)
+        l=max(nums)
         return gcd_euclidean(s,l)
 
         
