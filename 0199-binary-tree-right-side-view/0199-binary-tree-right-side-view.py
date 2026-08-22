@@ -13,20 +13,17 @@ class Solution(object):
         """
         if not root:
             return []
-        queue=deque([(root,0)])
-        result={}
+        queue=deque([root])
         ans=[]
         while queue:
             t=len(queue)
+            ans.append(queue[-1].val)
             for _ in range(t):
-                e,line=queue.popleft()
-                result[line]=e.val
+                e=queue.popleft()
                 if e.left:
-                    queue.append((e.left,line+1))
+                    queue.append(e.left)
                 if e.right:
-                    queue.append((e.right,line+1))
-        for values in sorted(result.items()):
-            ans.append(values[1])
+                    queue.append(e.right)
         return ans
 
 
